@@ -16,13 +16,17 @@ func _physics_process(delta):
 	# Handle jump & double jump: W, SPACE, UP arrow
 	if Input.is_action_just_pressed('ui_up') and jump_count == 1:
 		velocity.y = jump_speed
+		sprite_2d.animation = "double_jumping"
 		jump_count = 2
+		
 		
 	if Input.is_action_just_pressed('ui_up') and is_on_floor():
 		velocity.y = jump_speed
+		sprite_2d.animation = "jumping"
 		jump_count = 1
 
 	if !Input.is_action_just_pressed('ui_up') and is_on_floor():
+		sprite_2d.animation = "default"
 		jump_count = 0
 	
 	var direction := Input.get_axis("ui_left", "ui_right")
@@ -36,6 +40,7 @@ func _physics_process(delta):
 	if direction:
 		if is_dashing:
 			velocity.x =  direction * walk_speed * dash_speed
+			sprite_2d.animation = "dashing"
 		else:
 			velocity.x =  direction * walk_speed
 	else:
