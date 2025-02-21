@@ -15,3 +15,6 @@ texture = ExtResource("1_harvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0vjow")
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.2
