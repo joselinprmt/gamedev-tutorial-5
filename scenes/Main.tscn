@@ -29,9 +29,6 @@ position = Vector2(859.149, 452.054)
 [node name="Ground3" parent="." instance=ExtResource("1")]
 position = Vector2(295.95, 452.562)
 
-[node name="Player" parent="." instance=ExtResource("2_j3d16")]
-position = Vector2(198, 349)
-
 [node name="Label" type="Label" parent="."]
 offset_left = 454.0
 offset_top = 105.0
@@ -50,3 +47,6 @@ text = "Tutorial 3 Game Development
 by joselinprmt"
 label_settings = SubResource("LabelSettings_2ug3u")
 horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("2_j3d16")]
+position = Vector2(198, 349)
