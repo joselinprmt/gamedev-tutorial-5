@@ -4,11 +4,11 @@ extends CharacterBody2D
 @export var walk_speed = 200
 @export var jump_speed = -200
 
-@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
 var jump_count = 0
 var dash_speed = 4
 var is_dashing = false
+
+@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _physics_process(delta):
