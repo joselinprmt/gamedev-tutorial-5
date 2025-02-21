@@ -55,7 +55,8 @@ func _physics_process(delta):
 
 func start_dash():
 	is_dashing = true
-	$DashTimer.connect("timeout", stop_dash)
+	if not $DashTimer.timeout.is_connected(stop_dash):
+		$DashTimer.connect("timeout", stop_dash)
 	$DashTimer.start()
 
 func stop_dash():

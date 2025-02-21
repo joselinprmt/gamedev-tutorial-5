@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tu2k5or2dwqx"]
 
-[ext_resource type="Texture2D" uid="uid://b68jl37at5b4g" path="res://Assets/snow.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://8ueifmo76wd8" path="res://assets/terrain.png" id="1_4t218"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(351.8, 70)
@@ -8,23 +8,28 @@ size = Vector2(351.8, 70)
 [node name="Ground" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_4t218")
 
 [node name="Sprite2" type="Sprite2D" parent="."]
 position = Vector2(70.395, 0)
-texture = ExtResource("1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_4t218")
 
 [node name="Sprite3" type="Sprite2D" parent="."]
 position = Vector2(-140.79, 0)
-texture = ExtResource("1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_4t218")
 
 [node name="Sprite4" type="Sprite2D" parent="."]
 position = Vector2(-70.395, 0)
-texture = ExtResource("1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_4t218")
 
 [node name="Sprite5" type="Sprite2D" parent="."]
 position = Vector2(140.79, 0)
-texture = ExtResource("1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_4t218")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

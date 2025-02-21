@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=6 format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://tu2k5or2dwqx" path="res://Scenes/Ground.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://vt12p47hyop1" path="res://scenes/Player.tscn" id="2_j3d16"]
+[ext_resource type="FontFile" uid="uid://cn23cm01da3cu" path="res://assets/minecraft.ttf" id="3_alf3w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5wad"]
+font = ExtResource("3_alf3w")
+font_size = 40
+font_color = Color(0.94902, 0.596078, 0.733333, 1)
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ug3u"]
+font = ExtResource("3_alf3w")
+font_size = 34
+font_color = Color(0.996078, 0.85098, 0.611765, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Root" type="Node2D"]
 
@@ -16,3 +31,22 @@ position = Vector2(295.95, 452.562)
 
 [node name="Player" parent="." instance=ExtResource("2_j3d16")]
 position = Vector2(198, 349)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 454.0
+offset_top = 105.0
+offset_right = 719.0
+offset_bottom = 145.0
+text = "HELLO! 🎮"
+label_settings = SubResource("LabelSettings_b5wad")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 349.0
+offset_top = 168.0
+offset_right = 840.0
+offset_bottom = 241.0
+text = "Tutorial 3 Game Development
+by joselinprmt"
+label_settings = SubResource("LabelSettings_2ug3u")
+horizontal_alignment = 1
