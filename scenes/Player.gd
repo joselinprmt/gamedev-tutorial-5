@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var walk_speed = 200
 @export var jump_speed = -200
 
+@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 var jump_count = 0
 var dash_speed = 4
 var is_dashing = false
@@ -41,6 +43,10 @@ func _physics_process(delta):
 
 	# "move_and_slide" already takes delta time into account.
 	move_and_slide()
+	
+	# Flip according to dirrection
+	var is_left = velocity.x < 0
+	sprite_2d.flip_h = is_left
 
 func start_dash():
 	is_dashing = true
