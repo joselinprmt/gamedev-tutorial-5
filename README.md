@@ -7,13 +7,13 @@
 - Mengganti ground tile dan avatar Player
 - Menambahkan tulisan dan background
 - Menambahkan input map control WASD, Space, Shift, dan Right click Mouse
-- Menambahkan animasi dengan AnimatedSprite2D untuk state Idle (Default), Dash, Running, Jump, dan Double Jump, dan Arah pergerakan
+- Menambahkan animasi dengan AnimatedSprite2D untuk state Idle (Default), Dash, Running, Jump, Double Jump, dan Arah pergerakan
 
 ![image](https://github.com/user-attachments/assets/ee82932e-910c-4a8a-91dd-62d9015dbdfb)
 
 ## Eksplorasi Mekanika Pergerakan
 
-Pada latihan ini, saya menambah 2 mekanika pergerakan yaitu double jump dan dash. Pastikan tombol telah dibind pada Project > Project Settings > Input Map. Disini saya men-set input:
+Pada latihan ini, saya menambah 2 mekanika pergerakan yaitu double jump dan dash. Tombol pergerakan dibind pada Project > Project Settings > Input Map. Disini saya men-set input:
 - WASD & arrow keys untuk bergerak
 - W, Space, dan up arrow untuk jump
 - Right click & shift untuk dash
@@ -47,13 +47,13 @@ Dan ditambahkan juga Timer bernama `DashTimer` untuk mengatur durasi dash. `Dash
 
 ![image](https://github.com/user-attachments/assets/5ab3eb22-2765-441f-a977-dfe9bfb27eb9)
 
-Terakhir, akan ditambahkan if condition, jika Player menekan dash button beserta arahnya, kecepatan Player akan dikalikan dengan `dash_speed`, atau dipercepatn 4 kali.
+Terakhir, akan ditambahkan if condition, jika Player menekan dash button beserta arahnya, kecepatan Player akan dikalikan dengan `dash_speed`, atau dipercepat 4 kali.
 
 ![image](https://github.com/user-attachments/assets/5fc812b7-f82b-46f1-9df1-22ea09f85ae3)
 
 Mekanika pergerakan berhasil diimplementasikan beserta animasinya 🎉
 
-### Referensi
+## Referensi
 
 - swydev. (Juni, 2024). How To Dash & Double Jump - Godot 4 2D Tutorial [Video]. Youtube. https://youtu.be/NhHpDcpY8ok?si=ri9lwdq7SCnKXbH3
 - Coco Code. (Oktober, 2023). Start Your Game Creation Journey Today! (Godot beginner tutorial), AnimatedSprite2D & Character Movement. [Video] https://youtu.be/5V9f3MT86M8?si=ibWDtyKeUZ5Mq9VQ
