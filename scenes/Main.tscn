@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=7 format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://tu2k5or2dwqx" path="res://scenes/Ground.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dvjk1xjobi0v0" path="res://assets/background.png" id="1_l2btx"]
 [ext_resource type="PackedScene" uid="uid://vt12p47hyop1" path="res://scenes/Player.tscn" id="2_j3d16"]
 [ext_resource type="FontFile" uid="uid://cn23cm01da3cu" path="res://assets/minecraft.ttf" id="3_alf3w"]
 
@@ -19,6 +20,14 @@ outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Root" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -310.0
+offset_top = -234.0
+offset_right = 1532.0
+offset_bottom = 893.0
+texture = ExtResource("1_l2btx")
+expand_mode = 1
 
 [node name="Ground" parent="." instance=ExtResource("1")]
 position = Vector2(577.708, 521.86)
