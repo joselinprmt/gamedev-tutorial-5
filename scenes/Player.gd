@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var gravity = 200.0
-@export var walk_speed = 200
+@export var walk_speed = 300
 @export var jump_speed = -200
 
 var jump_count = 0
@@ -25,18 +25,20 @@ func _physics_process(delta):
 		sprite_2d.animation = "jumping"
 		jump_count = 1
 
-	if !Input.is_action_just_pressed("ui_up") and is_on_floor():
-		sprite_2d.animation = "default"
-		jump_count = 0
-
 	var direction := Input.get_axis("ui_left", "ui_right")
-
-	# Handle Dash: direction + right mouse
 	if Input.is_action_just_pressed("ui_dash"):
 		if direction and !is_dashing:
 			start_dash()
+	
+	# Handle walk and idle
+	if !Input.is_action_just_pressed("ui_up") and is_on_floor():
+		if direction:
+			sprite_2d.animation = "dashing"
+		else:
+			sprite_2d.animation = "default"
+		jump_count = 0
 
-	# Handle walk and dash
+	# Handle dash
 	if direction:
 		if is_dashing:
 			velocity.x = direction * walk_speed * dash_speed

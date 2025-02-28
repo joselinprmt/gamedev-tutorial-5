@@ -163,7 +163,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dashing",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -224,7 +224,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"double_jumping",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -232,11 +232,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vjow"]
-size = Vector2(100, 76)
+size = Vector2(68, 76)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(129, 113)
@@ -246,7 +246,9 @@ script = ExtResource("1_heqc8")
 position = Vector2(-1, -8.00001)
 scale = Vector2(2.9375, 2.875)
 sprite_frames = SubResource("SpriteFrames_6xcki")
+animation = &"dashing"
 autoplay = "default"
+frame_progress = 0.423669
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0vjow")
