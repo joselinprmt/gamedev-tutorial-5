@@ -1,3 +1,16 @@
+# Tutorial 5: Assets Creation & Integration 🎮
+
+![Screenshot 2025-03-14 052340](https://github.com/user-attachments/assets/ac0f51fb-e920-4a55-b422-35956114167e)
+
+## Polishing yang dilakukan
+
+- Menambahkan 2 objek baru: Cherry dan Pineapple, beserta animasi idle dan ketika Player menyentuh objek tersebut
+- Menambahkan sound effect (sfx) untuk Player ketika Jump dan Dash
+- Menambahkan sound effect (sfx) untuk Cherry & Pineapple ketika Player menyentuh objek tersebut
+- Menambahkan background music
+
+---
+
 # Tutorial 3: Introduction to Game Programming 🎮
 
 ![Screenshot 2025-02-28 184657](https://github.com/user-attachments/assets/e34e8029-3db4-4a81-9d28-96a1c5ebf04e)
