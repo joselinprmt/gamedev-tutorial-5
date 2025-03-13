@@ -18,11 +18,12 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_2ug3u"]
 font = ExtResource("3_alf3w")
 font_size = 34
-font_color = Color(0.996078, 0.85098, 0.611765, 1)
+font_color = Color(0.873573, 0.551215, 0.380468, 1)
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Root" type="Node2D"]
+scale = Vector2(0.8, 0.8)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -40,133 +41,161 @@ stretch_mode = 1
 flip_v = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 454.0
-offset_top = 105.0
-offset_right = 719.0
-offset_bottom = 145.0
-text = "HELLO! 🎮"
+offset_left = 581.25
+offset_top = 83.75
+offset_right = 846.25
+offset_bottom = 123.75
+text = "HELLO!"
 label_settings = SubResource("LabelSettings_b5wad")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 349.0
-offset_top = 168.0
-offset_right = 840.0
-offset_bottom = 241.0
+offset_left = 476.25
+offset_top = 146.75
+offset_right = 971.25
+offset_bottom = 219.75
 text = "Tutorial 5 Game Development
 by joselinprmt"
 label_settings = SubResource("LabelSettings_2ug3u")
 horizontal_alignment = 1
-
-[node name="Collectible Items" type="Node2D" parent="."]
-
-[node name="Cherry" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(365, 279)
-
-[node name="Cherry2" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(430, 278)
-
-[node name="Cherry3" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(717, 379)
-
-[node name="Cherry4" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(791, 378)
-
-[node name="Cherry5" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(863, 378)
-
-[node name="Cherry7" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1155, 280)
-
-[node name="Cherry6" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(937, 377)
-
-[node name="Cherry8" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1229, 279)
-
-[node name="Cherry9" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1301, 279)
-
-[node name="Cherry10" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1375, 278)
-
-[node name="Cherry11" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1444, 277)
-
-[node name="Cherry12" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1154, 221)
-
-[node name="Cherry13" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1228, 220)
-
-[node name="Cherry14" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1300, 220)
-
-[node name="Cherry15" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1374, 219)
-
-[node name="Cherry16" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
-position = Vector2(1443, 218)
-
-[node name="Pineapple" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(511, 449)
-
-[node name="Pineapple2" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(580, 448)
-
-[node name="Pineapple3" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(646, 447)
-
-[node name="Pineapple4" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-284, 488)
-
-[node name="Pineapple5" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-211, 489)
-
-[node name="Pineapple6" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-142, 488)
-
-[node name="Pineapple7" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-76, 487)
-
-[node name="Pineapple8" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-6, 486)
-
-[node name="Pineapple9" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-282, 425)
-
-[node name="Pineapple10" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-209, 426)
-
-[node name="Pineapple11" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-140, 425)
-
-[node name="Pineapple12" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-74, 424)
-
-[node name="Pineapple13" parent="Collectible Items" instance=ExtResource("7_mcxow")]
-position = Vector2(-4, 423)
+metadata/_edit_use_anchors_ = true
 
 [node name="Grounds" type="Node2D" parent="."]
 
 [node name="Ground" parent="Grounds" instance=ExtResource("1")]
-position = Vector2(577.708, 521.86)
+position = Vector2(697.958, 605.297)
+
+[node name="Ground6" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(187.5, 776.25)
+
+[node name="Ground10" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(-165, 776.25)
+
+[node name="Ground11" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(1243.75, 776.25)
+
+[node name="Ground7" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(891.25, 776.25)
+
+[node name="Ground9" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(1596.25, 776.25)
+
+[node name="Ground8" parent="Grounds" instance=ExtResource("1")]
+position = Vector2(538.75, 776.25)
 
 [node name="Ground2" parent="Grounds" instance=ExtResource("1")]
-position = Vector2(859.149, 452.054)
+position = Vector2(979.399, 535.491)
 
 [node name="Ground3" parent="Grounds" instance=ExtResource("1")]
-position = Vector2(295.95, 452.562)
+position = Vector2(416.2, 536)
 
 [node name="Ground4" parent="Grounds" instance=ExtResource("1")]
-position = Vector2(-145, 564)
+position = Vector2(262.75, 312.25)
 
 [node name="Ground5" parent="Grounds" instance=ExtResource("1")]
-position = Vector2(1301, 361)
+position = Vector2(1259.5, 463)
 
 [node name="Player" parent="." instance=ExtResource("2_j3d16")]
-position = Vector2(198, 349)
+position = Vector2(337.5, 400)
+
+[node name="Collectible Items" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="Cherry" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(686.25, 265)
+
+[node name="Cherry6" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1170, 696.25)
+
+[node name="Cherry17" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1050, 461.25)
+
+[node name="Cherry3" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(837.25, 462.438)
+
+[node name="Cherry4" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(911.25, 461.438)
+
+[node name="Cherry5" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(983.25, 461.438)
+
+[node name="Cherry7" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1113.5, 382)
+
+[node name="Cherry8" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1187.5, 381)
+
+[node name="Cherry9" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1259.5, 381)
+
+[node name="Cherry10" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1333.5, 380)
+
+[node name="Cherry11" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1402.5, 379)
+
+[node name="Cherry12" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1112.5, 323)
+
+[node name="Cherry13" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1186.5, 322)
+
+[node name="Cherry14" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1258.5, 322)
+
+[node name="Cherry15" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1332.5, 321)
+
+[node name="Cherry16" parent="Collectible Items" instance=ExtResource("6_7dqhv")]
+position = Vector2(1401.5, 320)
+
+[node name="Pineapple" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(631.25, 532.438)
+
+[node name="Pineapple15" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(746.25, 262.5)
+
+[node name="Pineapple14" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(1102.5, 693.75)
+
+[node name="Pineapple2" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(700.25, 531.438)
+
+[node name="Pineapple3" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(766.25, 530.438)
+
+[node name="Pineapple4" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(123.75, 236.25)
+
+[node name="Pineapple5" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(196.75, 237.25)
+
+[node name="Pineapple6" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(265.75, 236.25)
+
+[node name="Pineapple7" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(331.75, 235.25)
+
+[node name="Pineapple8" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(401.75, 234.25)
+
+[node name="Pineapple9" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(125.75, 173.25)
+
+[node name="Pineapple10" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(198.75, 174.25)
+
+[node name="Pineapple11" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(267.75, 173.25)
+
+[node name="Pineapple12" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(333.75, 172.25)
+
+[node name="Pineapple13" parent="Collectible Items" instance=ExtResource("7_mcxow")]
+position = Vector2(403.75, 171.25)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(0.8, 0.8)
 stream = ExtResource("5_7ybmi")
 autoplay = true
