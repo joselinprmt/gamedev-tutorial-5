@@ -9,6 +9,8 @@ var dash_speed = 4
 var is_dashing = false
 
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sfx_jump: AudioStreamPlayer2D = $sfx_jump
+@onready var sfx_dash: AudioStreamPlayer2D = $sfx_dash
 
 
 func _physics_process(delta):
@@ -19,11 +21,13 @@ func _physics_process(delta):
 		velocity.y = jump_speed
 		sprite_2d.animation = "double_jumping"
 		jump_count = 2
+		sfx_jump.play()
 
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = jump_speed
 		sprite_2d.animation = "jumping"
 		jump_count = 1
+		sfx_jump.play()
 
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if Input.is_action_just_pressed("ui_dash"):
@@ -61,6 +65,7 @@ func start_dash():
 	if not $DashTimer.timeout.is_connected(stop_dash):
 		$DashTimer.connect("timeout", stop_dash)
 	$DashTimer.start()
+	sfx_dash.play()
 
 
 func stop_dash():

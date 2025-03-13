@@ -6,8 +6,10 @@
 size = Vector2(351.8, 70)
 
 [node name="Ground" type="StaticBody2D"]
+texture_filter = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_4t218")
 
