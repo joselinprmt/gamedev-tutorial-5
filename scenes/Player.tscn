@@ -8,6 +8,9 @@
 [ext_resource type="AudioStream" uid="uid://dpy7jfwaqjbt8" path="res://assets/sound/sfx_jump.mp3" id="6_mv88f"]
 [ext_resource type="AudioStream" uid="uid://durhr3x7jwtt1" path="res://assets/sound/sfx_dash.wav" id="7_103g1"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vjow"]
+size = Vector2(68, 76)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wacph"]
 atlas = ExtResource("2_6dqlp")
 region = Rect2(0, 0, 32, 32)
@@ -237,13 +240,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vjow"]
-size = Vector2(68, 76)
-
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(129, 113)
 script = ExtResource("1_heqc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_0vjow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -8.00001)
@@ -252,10 +256,6 @@ sprite_frames = SubResource("SpriteFrames_6xcki")
 animation = &"dashing"
 autoplay = "default"
 frame_progress = 0.0372777
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-texture_filter = 1
-shape = SubResource("RectangleShape2D_0vjow")
 
 [node name="DashTimer" type="Timer" parent="."]
 wait_time = 0.2
