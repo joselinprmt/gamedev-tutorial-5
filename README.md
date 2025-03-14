@@ -9,7 +9,63 @@
 - Menambahkan sound effect (sfx) untuk Cherry & Pineapple ketika Player menyentuh objek tersebut
 - Menambahkan background music
 
----
+## Menambahkan background music
+
+Pertama, akan ditambahkan file bgm.wav pada folder assets/sound. Lalu, karena bgm akan selalu diputar ketika game berjalan, maka akan diatur agar sound selalu looping pada tab import > loop mode > Forward. Lalu setelahnya akan di reimport.
+
+![image](https://github.com/user-attachments/assets/87b978d5-fdb4-4e86-b1b4-77f0215d6dd2)
+
+Setelahnya, tambahkan child AudioStreamPlayer2D pada scene Main, lalu drag file bgm.wav ke bagian stream, dan set autoplay menjadi on agar sound akan langsung diplay saat scene Main pertama kali dibuka. Maka, background music telah berhasil ditambahkan.
+
+![image](https://github.com/user-attachments/assets/4ead5e68-26a6-4b69-a8eb-bab8e6e29f8d)
+
+## Menambahkan sound effect ketika Player melakukan Jump dan Dash
+
+Seperti sebelumnya, akan ditambahkan child AudioStreamPlayer2D pada Player, untuk sfx_jump.wav dan sfx_dash.wav dari asset folder.
+
+![image](https://github.com/user-attachments/assets/c88203ca-a2d9-4087-83bb-bdfa63918a31)
+
+Lalu drag dan drop sambil menekan CTRL pada gdscript Player.gd. Hasilnya, akan ter-import sfx_jump dan sfx_dash seperti berikut.
+
+![image](https://github.com/user-attachments/assets/077d560a-505a-4b66-8796-9222ec7992b5)
+
+Selanjutnya, akan di-call sfx.jump.play() ketika player melakukan jump dan double jump pada fungsi _physics_process:
+
+![image](https://github.com/user-attachments/assets/93851e09-5bd0-4bfd-971f-a952de241487)
+
+Begitu juga dengan sfx_dash:
+
+![image](https://github.com/user-attachments/assets/41ada1e1-f2a0-44ce-9832-918a2bce897e)
+
+Hasilnya, akan muncul sound effect ketika pLayer melakukan Jump dan dash.
+
+## Menambahkan objek baru: Cherry dan Pineapple dengan AnimatedSprite2D, disertai dengan sfx nya
+
+Akan ditambahkan scene baru bernama Cherry.tscn, lalu buat rootnya menjadi Area2D. Tambahkan child CollisionShape, AnimatedSprite, dan AudioStreamPlayer. Lalu buat Collision Shapenya menjadi circle shape. Pada Animated Sprite, tambahkan Sprite Frame baru, dan pada animation default, tambahkan frame dari sprite sheet seperti yang telah dijelaskan pada tutorial:
+
+![image](https://github.com/user-attachments/assets/408c0944-bfa6-4c85-9954-4749cbe4d054)
+
+Tambahkan juga animasi collected yang akan dijalankan ketika player menyentuh objek.
+
+![image](https://github.com/user-attachments/assets/fa907984-15cb-4707-b4cc-e2acc4d2d4b5)
+
+Pada animasi default, karena animasi objek akan terus berjalan dan selalu dimulai ketika pertama kali scene di-load, aktifkan animation looping dan autoplay on load. Set juga framenya menjadi 15 FPS. Hasilnya, sprite frame menjadi sebagai berikut. 
+
+![image](https://github.com/user-attachments/assets/003a55dc-217e-44e7-afd9-2f91fc3ff48d)
+
+Lalu, akan ditambahkan gdscript yang akan men-handle sfx dan animasi ketika Player menyentuh objek, dengan mengaktifkan on_body_entered() node, dan mengecek jika body Mode2D adalah player, sebagai berikut. 
+
+![image](https://github.com/user-attachments/assets/7ed32b9b-b08d-465c-8cbe-9fce38216d99)
+
+Lalu, lakukan hal yang sama juga untuk scene Pineapple.
+
+![image](https://github.com/user-attachments/assets/c2fc01ce-6dcd-4de3-9038-1ec170dcc9d5)
+
+Hasilnya, telah dibuat dua objek items yang akan hilang ketika berinteraksi dengan Player, atau dengan kata lain, items yang dapat di-collect oleh Player, lengkap dengan animasi dan sfx ketika berinteraksi dengan Player 🎉
+
+![image](https://github.com/user-attachments/assets/647102bf-8b81-4130-8355-5e8a94485080)
+
+*Daftar asset sfx dan animasi yang digunakan terdapat pada section referensi di bawah.
 
 # Tutorial 3: Introduction to Game Programming 🎮
 
@@ -66,7 +122,12 @@ Terakhir, akan ditambahkan if condition, jika Player menekan dash button beserta
 
 Mekanika pergerakan berhasil diimplementasikan beserta animasinya 🎉
 
-## Referensi
+## Referensi & Asset
 
 - swydev. (Juni, 2024). How To Dash & Double Jump - Godot 4 2D Tutorial [Video]. Youtube. https://youtu.be/NhHpDcpY8ok?si=ri9lwdq7SCnKXbH3
 - Coco Code. (Oktober, 2023). Start Your Game Creation Journey Today! (Godot beginner tutorial), AnimatedSprite2D & Character Movement. [Video] https://youtu.be/5V9f3MT86M8?si=ibWDtyKeUZ5Mq9VQ
+
+- Player, terrain, cherry, dan pineapple assets. https://pixelfrog-assets.itch.io/pixel-adventure-1
+- Background music. https://gooseninja.itch.io/happy-loops
+- Jump and dash sound effect. https://jalastram.itch.io/8-bit-jump-sound-effects
+- Fruits collected sound effect. https://brackeysgames.itch.io/brackeys-platformer-bundle
